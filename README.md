@@ -25,7 +25,7 @@ composer install
 touch database/database.sqlite
 
 # configure installation
-cp .env.example .env
+cp env.example .env
 
 # migration and seed database
 php artisan migrate:refresh --seed
