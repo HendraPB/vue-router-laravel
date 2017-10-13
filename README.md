@@ -1,5 +1,6 @@
 # vue-router-laravel
-Using vue-router in Laravel
+Using vue-router in Laravel.
+
 I have a problem in using vue-router nested routes in webpack
 
 ## Build Setup
