@@ -18,7 +18,6 @@ class UserController extends Controller
     public function index()
     {
         $users = User::All();
-
         foreach ($users as $user) {
             $user->jumlah_artikel = Artikel::where('user_id', $user->user_id)->count();
         }
@@ -57,7 +56,14 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $artikels = Artikel::where('user_id', $id)->get();
+        foreach ($artikels as $artikel) {
+            $artikel->creator = $artikel->user->user_nama;
+        }
+
+        return ([
+            'data' => $artikels
+        ]);
     }
 
     /**

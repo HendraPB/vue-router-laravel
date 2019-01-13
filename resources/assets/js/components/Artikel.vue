@@ -10,6 +10,7 @@
                         <router-link :to="{ name: 'show', query: { id: artikel.artikel_id }}">{{ artikel.artikel_judul }}</router-link>
                     </h4>
                     <p class="card-text">{{ artikel.artikel_isi }}</p>
+                    <div>by <b>{{ artikel.user.user_nama }}</b></div>
                 </div>
             </div>
         </div>
@@ -28,7 +29,10 @@
         },
         methods : {
             fetchUsers() {
-                axios("api/artikel").then(({data}) => this.artikels = data.data)
+                if(this.$route.query.id)
+                    axios("api/user/"+this.$route.query.id).then(({data}) => this.artikels = data.data)
+                else
+                    axios("api/artikel").then(({data}) => this.artikels = data.data)
             }
         }
     }
