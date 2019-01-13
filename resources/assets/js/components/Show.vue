@@ -8,6 +8,7 @@
                         <a href="#">{{ artikel.artikel_judul }}</a>
                     </h4>
                     <p class="card-text">{{ artikel.artikel_isi }}</p>
+                    <div>by <router-link :to="{ name: 'artikel', query: { id: artikel.user_id }}">{{ artikel.creator }}</router-link></div>
                 </div>
             </div>
         </div>

@@ -18,7 +18,7 @@ class ArtikelController extends Controller
     {
         $artikels = Artikel::All();
         foreach ($artikels as $artikel) {
-            $artikel->user = $artikel->user->user_nama;
+            $artikel->creator = $artikel->user->user_nama;
         }
 
         return ([
@@ -56,7 +56,7 @@ class ArtikelController extends Controller
     public function show($id)
     {
         $artikel = Artikel::find($id);
-        $artikel->user = $artikel->user->user_nama;
+        $artikel->creator = $artikel->user->user_nama;
 
         return ([
             'data' => $artikel
