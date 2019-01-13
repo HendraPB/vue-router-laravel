@@ -1,7 +1,5 @@
 # vue-router-laravel
-Using vue-router in Laravel.
-
-I have a problem in using vue-router nested routes in webpack
+use Vue-Router on Laravel to create an SPA that will call the API on Laravel route
 
 ## Installation
 
