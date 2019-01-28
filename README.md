@@ -2,12 +2,12 @@
 use Vue-Router on Laravel to create an SPA that will call the API on Laravel route
 
 # Feature
-SPA
-Vue.js
-Webpack (Laravel Mix)
-Laravel Framework
-SQLite
-Migration and Seeder Generator
+1. SPA
+2. Vue.js
+3. Webpack (Laravel Mix)
+4. Laravel Framework
+5. SQLite
+6. Migration and Seeder Generator
 
 ## Installation
 
